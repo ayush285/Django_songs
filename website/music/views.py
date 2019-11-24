@@ -141,10 +141,10 @@ def create_question(request, gform_id):
     return render(request, 'music/create_question.html', context)
 
 
-def filler(request, gform_id):
+def filler(request, gform_id, user_id):
 	user = request.user
 	gform = get_object_or_404(Gform, pk=gform_id)
-	return render(request, 'music/filler.html', {'user': user, 'gform':gform})
+	return render(request, 'music/filler.html', {'gform':gform, 'user':user})
 
 
 # def delete_album(request, album_id):

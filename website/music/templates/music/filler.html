@@ -4,6 +4,16 @@
 
 {% block body %}
 
+{{ gform.id }} <br>
 
+{{ gform.user }} <br>
+{{ gform.gform_name }} <br>
+{{ gform.gform_desc }} <br> <br><br>
+
+
+
+{% for question in gform.question_set.all %}
+	<pre>{{ question.ques_text }}           {{ question.ques_type }}</pre><br>
+{% endfor %}
 
 {% endblock %}

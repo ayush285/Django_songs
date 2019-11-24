@@ -30,7 +30,7 @@
             <ul class="nav nav-pills" style="margin-bottom: 10px;">
                 <li role="presentation" class="active"><a href="{% url 'music:detail' gform.id %}">View All</a></li>
                 <li role="presentation"><a href="{% url 'music:create_question' gform.id %}">Add New Question</a></li> 
-                <li role="presentation"><a href="{% url 'music:filler' gform.id  user %}">Link</a></li> 
+                <li role="presentation"><a href="{% url 'music:filler' gform.id user.id  %}">Link</a></li> 
             </ul>
 
             <div class="panel panel-default">
